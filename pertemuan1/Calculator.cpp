@@ -14,9 +14,9 @@ class Calculator {
 public:
 	//input bilangan
     void get() { 
-        cout << "Enter First Number: ";
+        cout << "Masukkan bilangan pertama: ";
         cin >> A;
-        cout << "Enter Second Number: ";
+        cout << "Masukkan bilangan kedua: ";
         cin >> B;
     }
     //menjumlahkan bilangan
@@ -34,7 +34,7 @@ public:
     //membagi bilangan
     double div() {
         if (B == 0) {
-            cout << "Divison By Zero" << endl;
+            cout << "Pembagian dengan bilangan 0" << endl;
             return INFINITY;
         }
         else {
@@ -48,31 +48,31 @@ int main() {
     int choice;
     //cal object dari class Calculator
     Calculator cal; 
-    cout << "Enter 1 Add 2 Numbers"
-        << "\nEnter 2 Subtract 2 Numbers"
-        << "\nEnter 3 Multiply 2 Numbers"
-        << "\nEnter 4 Divide 2 Numbers"
-        << "\nEnter 0 To Exit"
+    cout << "Ketik 1 untuk menjumlahkan 2 bilangan"
+        << "\nKetik 2 untuk mengurangkan 2 bilangan"
+        << "\nKetik 3 untuk mengalikankan 2 bilangan"
+        << "\nKetik 4 untuk membagi 2 bilangan"
+        << "\nKetik 0 untuk keluar dari program"
         << "\n";
     do {
-        cout << "\nEnter Choice: ";
+        cout << "\nKetik pilihan anda: ";
         cin >> choice;
         switch (choice) {
         case 1:
             cal.get();
-            cout << "Result: " << cal.add() << endl;
+            cout << "Hasil: " << cal.add() << endl;
             break;
         case 2:
             cal.get();
-            cout << "Result: " << cal.sub() << endl;
+            cout << "Hasil: " << cal.sub() << endl;
             break;
         case 3:
             cal.get();
-            cout << "Result: " << cal.mul() << endl;
+            cout << "Hasil: " << cal.mul() << endl;
             break;
         case 4:
             cal.get();
-            cout << "Result: " << cal.div() << endl;
+            cout << "Hasil: " << cal.div() << endl;
             break;
         }
     } while (choice >= 1 && choice <= 4);
