@@ -3,12 +3,13 @@
 using namespace std;
 
 class Demo {
-private :
+// default access specifier di c++ : private
+//private :
 	int cx,cy;
 public :
 	void input_data(int x, int y) {
-		cx = x;
-		cy = y;
+		Demo::cx = x;
+		Demo::cy = y;
 	}
 	
 	void show_data() {

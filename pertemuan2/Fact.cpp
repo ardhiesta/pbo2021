@@ -16,6 +16,32 @@ void Fact::getfact(){
 	short i;
 	for(i=1; i<=num; i++)
 		f = f*i;
+/*
+f = 1
+num = 3
+
+i = 1
+i <= 3 : Yes
+f = 1*1 = 1
+i++
+
+i = 2
+i <= 3 : Yes
+f = 1*2 = 2
+i++
+
+i = 3
+i <= 3 : Yes
+f = 2*3 = 6
+i++
+
+i = 4
+i <= 3 : No
+
+for(i=1; i<=num; i++)
+	f = f*i;
+*/
+	
 	cout<<"Factorial of"<<num<<" is "<<f<<endl;
 }
 
