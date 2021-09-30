@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 
-class Communication {
+class GrandFather {
 public:
-    Communication() {
-        cout << "Communication constructor executed" << endl;
+    GrandFather() {
+        cout << "GrandFather constructor executed" << endl;
     }
 
     void write() {
@@ -12,34 +12,33 @@ public:
     }
 };
 
-// fixing by add virtual keyword
-class Transmitter: virtual public Communication {
+class Parent1: virtual public GrandFather {
 public: 
-    Transmitter() {
-        cout << "Transmitter constructor executed" << endl;
+    Parent1() {
+        cout << "Parent1 constructor executed" << endl;
     }
 };
 
-class Receiver: virtual public Communication {
+class Parent2: virtual public GrandFather {
 public:
-    Receiver() {
-        cout << "Receiver constructor executed" << endl;
+    Parent2() {
+        cout << "Parent2 constructor executed" << endl;
     }
 };
 
-class Radio: public Transmitter, public Receiver {
+class Child: public Parent1, public Parent2 {
 public:
-    Radio() {
-        cout << "Radio constructor executed" << endl;
+    Child() {
+        cout << "Child constructor executed" << endl;
     }
 };
 
 int main() {
-    Radio r;
-    // berapa kali constructor Communication dipanggil?
+    Child c;
+    // berapa kali constructor GrandFather dipanggil?
     
     // apa yang terjadi kalau write dipanggil?
-    // r.write();
+    c.write();
 
 
     // apa perbedaan dengan file multi.cpp?

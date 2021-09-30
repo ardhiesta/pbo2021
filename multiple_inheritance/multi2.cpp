@@ -26,7 +26,14 @@ public:
     }
 };
 
-class Child: public Parent1, public Parent2 {
+class Parent3: public GrandFather {
+public:
+    Parent3() {
+        cout << "Parent3 constructor executed" << endl;
+    }
+};
+
+class Child: public Parent1, public Parent2, public Parent3 {
 public:
     Child() {
         cout << "Child constructor executed" << endl;
@@ -39,6 +46,6 @@ int main() {
     //c.write();
     
     // fixing by specifying class
-    // c.Parent1::write();
+    c.Parent2::write();
     return 0;
 }

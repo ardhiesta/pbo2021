@@ -31,6 +31,6 @@ public:
 
 int main() {
     Child c;
-    // berapa kali constructor Communication dipanggil?
+    // berapa kali constructor GrandFather dipanggil?
     return 0;
 }
