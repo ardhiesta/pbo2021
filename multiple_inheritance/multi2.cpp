@@ -46,6 +46,6 @@ int main() {
     //c.write();
     
     // fixing by specifying class
-    c.Parent2::write();
+    c.Parent1::write();
     return 0;
 }

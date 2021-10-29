@@ -8,7 +8,7 @@ public class MyClass implements MyInterface {
     @Override
     public void open() {
         // TODO Auto-generated method stub
-        
+        System.out.println("open");
     }
 
     @Override
