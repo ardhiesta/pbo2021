@@ -8,10 +8,10 @@ int main() {
     // thread1.detach();
     // thread2.detach();
     // thread3.detach();
-    this_thread::sleep_for ( 10s );
+    // this_thread::sleep_for ( 10s );
     thread1.stop();
     thread2.stop();
     thread3.stop();
-    this_thread::sleep_for ( 3s );
+    // this_thread::sleep_for ( 3s );
     return 0;
 }
